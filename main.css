@@ -1,0 +1,180 @@
+body{
+	width: 100%;
+	height: 100vmin;
+	background: url("http://time-news.net/uploads/posts/2016-04/1461603102_18.jpg") no-repeat center/cover fixed;
+	margin:0;
+	color:#09f;
+	font-family: "Poiret One", sans-serif;
+	font-weight: 600;
+	box-sizing: border-box;
+	transition: all 0.5s ease-out;
+}
+h1{
+	text-align: center;
+}
+h2{
+	text-align: center;
+	font-size: 14px;
+}
+h1 span,
+h2 span,
+p span{
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+}
+#example{
+	width: 600px;
+	margin:auto;
+	clear: both;
+	text-align: center;
+	height:auto;
+}
+#example ul{
+	text-align: center;
+	
+}
+#list{
+	clear: both;
+	text-align: center;
+}
+p{
+	text-align: center;
+}
+ul{
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase;
+	list-style: none;
+	padding-left: 0;
+	font-size: 16px;
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 0 30px;
+}
+
+li{
+	text-transform: lowercase;
+}
+
+li:first-child{
+	margin-top: 5px;
+}
+form{
+	width: 300px;
+	margin:auto;
+	text-align: center;
+	border: 1px solid #fff;
+	padding: 10px 5px 5px;
+	border-radius: 5px;
+	margin-bottom: 15px;
+}
+input{
+	width:calc(100% - 20px);
+	margin-bottom:10px;
+	background: #fff;
+	border:none;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+input[type="radio"]{
+	width:20px;
+	
+}
+label{
+	text-align: center;
+	margin:auto;
+	margin-right: -6px;
+	background: #fff;
+	padding: 5px 10px;
+	display: inline;
+	border-radius: 5px;
+	color:#09f;
+
+}
+select{
+	clear: both;
+	width:40px;
+	
+	
+	background: #fff;
+}
+#type{
+	width:120px;
+	
+}
+input[type="submit"]{
+	width: 90px;
+	margin:auto;
+	text-align: center;
+	color:#fff;
+	font-family: "Poiret One", sans-serif;
+	font-weight: 600;
+	background: #09f;
+	cursor: pointer;
+	transition: all 0.5s ease-out;
+}
+input[type="submit"]:hover{
+	background: #0f3;
+}
+
+
+
+input::-webkit-input-placeholder {
+	color:#09f;
+	font-family: "Poiret One", sans-serif;
+	font-weight: 600;
+}
+input::-moz-placeholder{
+	color:#09f;
+	font-family: "Poiret One", sans-serif;
+	font-weight: 600;
+
+}
+input[value]{
+	color:#09f;
+	font-family: "Poiret One", sans-serif;
+	font-weight: 600;
+	font-size:16px;
+}
+.color{
+	width:auto;
+}
+.color + img{
+	border: 1px solid #09f;
+
+}
+.col{
+	padding: 5px;
+	border-radius: 0;
+	vertical-align: middle;
+}
+.col:first-child{
+	border-radius: 5px 0 0 5px;
+}
+.col:last-child{
+	border-radius: 0 5px 5px 0;
+	
+}
+div{
+	margin-bottom: 5px;
+	height:28px;	
+	vertical-align: middle;
+}
+.allsizes{
+	margin-top: 10px;
+}
+#model{
+	margin-bottom: 15px;
+}
+.group1 {
+	border-radius: 5px 0 0 5px ;
+	margin-bottom: 15px;
+	margin-left: -4px;
+}
+
+.group1 + .group1{
+	border-radius: 0 5px 5px 0 ;
+	
+}

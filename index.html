@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="main.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+	<script   src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<h1><span>Китайская фабрика роликов:)</span></h1>
+	<p><span>Чего изволите сударь?:)</span></p>
+	<form id="form">
+		
+		<div>
+			<label>Тип роликов
+				<select id="type">
+					<option value="slalom">slalom</option> 
+					<option value="fitnes">fitnes</option> 
+					<option value="agresive">agresive</option> 
+					<option value="speedskates">speedskates</option> 
+				</select>
+			</label>
+		</div>
+		<input id="brandName" id="type" type="text" placeholder="Введите имя бренда роликов" value="">
+		<input id="model" type="text" placeholder="Введите модель роликов" value="">
+		<label class="group1"><input class="radio" type="radio" name="group1" checked="checked" value="male">Male</label>
+		<label class="group1"><input class="radio" type="radio" name="group1" value="female">Female</label>
+		<div class="allsizes">
+			<label > Размер
+				<select id="size">
+					<option value="38">38</option> 
+					<option value="39">39</option> 
+					<option value="40">40</option> 
+					<option value="41">41</option> 
+					<option value="42">42</option> 
+					<option value="43">43</option> 
+					<option value="44">44</option> 
+					<option value="45">45</option> 
+				</select>
+			</label> 
+		</div>
+
+		<div>
+			<label class="col"><input class="color" type="checkbox" name="group2" checked="checked" value="black"><img src="http://2xu-russia.ru/upload/uf/9ef/9ef1b7f3c48a3e18637a66606e3e6a53.jpg" alt="black"></label>
+			<label class="col"><input class="color" type="checkbox" name="group2" value="white"><img src="http://www.passat-b5.ru/images/buttons/collapse_40b.png" alt="white"></label>
+			<label class="col"><input class="color" type="checkbox" name="group2" value="blue"><img src="https://www.antalis.ru/images/color/RU/color_C.gif" alt="blue"></label>
+			<label class="col"><input class="color" type="checkbox" name="group2"  value="yellow"><img src="http://2xu-russia.ru/upload/uf/647/6474efdcf213ddcd3e4b7819b02d1b6b.jpg" alt="yellow"></label>
+			<label class="col"><input class="color" type="checkbox" name="group2"  value="red"><img src="https://www.antalis.ru/images/color/RU/color_D.gif" alt="red"></label>
+			<label class="col"><input class="color" type="checkbox" name="group2" value="purple"><img src="http://amiloshop.ru/image/cache/data/colors/14-13x13.jpg" alt="purple"></label>
+		</div>
+
+		
+		<input id="cost" type="text" placeholder="Введите стоимость роликов" value="">
+		<input id="submit" type="submit">
+	</form>
+	<div id="example">
+		<h2><span>Пример:)</span></h2>
+	</div>
+	<div id="list">
+		<h2><span>Ваш вариант:)</span></h2>
+	</div>
+
+	
+</body>
+</html>
