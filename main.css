@@ -35,8 +35,11 @@ p span{
 	
 }
 #list{
-	clear: both;
+	overflow: hidden;
+	height:auto;
 	text-align: center;
+	margin-bottom: 100px;
+
 }
 p{
 	text-align: center;
@@ -177,4 +180,22 @@ div{
 .group1 + .group1{
 	border-radius: 0 5px 5px 0 ;
 	
+}
+.timer{
+	color:red;
+	font-size:25px;
+	font-weight: bold;
+	height:auto;
+	
+}
+.timer span{
+	display: inline-block;
+	min-width:30px;
+	padding:5px;
+	background: #fff;
+	border-radius: 5px;
+
+}
+.name{
+	margin-bottom: 10px;
 }

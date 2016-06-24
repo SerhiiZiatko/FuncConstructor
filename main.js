@@ -39,17 +39,7 @@ function ready(){
     	this.color = color;
     	this.cost = cost;
 
-    	if( parseInt( cost ) <= 200 )
-    		this.material = "cloth"; 
-    	
-    	else if( parseInt( cost ) > 200 && parseInt( cost ) < 500 )
-    		this.material = "plastic";
-
-    	else if( parseInt( cost ) > 500 )
-    		this.material = "carbon"; 
-
-
-        var wheelsDiametr = {
+    	var wheelsDiametr = {
             "slalom": "80mm",
             "fitnes": "84mm",
             "agresive": "72mm",
@@ -63,11 +53,35 @@ function ready(){
     		this.wheels = "80mm";
     }
 
+
+    chinaRollers.prototype.material = function(){
+
+        if ( +this.cost <= 200 )
+            return "cloth";  
+        
+        if ( +this.cost > 200 && this.cost < 500)
+            return "plastic";
+        
+        return "carbon";
+        
+       /* if ( +this.cost <= 200 ){
+            this.material = "cloth";
+            return this.material;
+        }
+        if ( +this.cost > 200 && this.cost < 500){
+            this.material = "plastic";
+            return this.material;
+        }
+        this.material = "carbon";
+        return this.material;*/
+    };
+    
+
     // примеры
     var seba = new chinaRollers( "slalom", "Seba", "frx", "male", "45", "White-Black", "210" );
     var rollerBlade = new chinaRollers( "slalom", "RollerBlade", "twister", "female", "39", "Black", "240" );
-    
 
+    //console.dir( seba.material() );
     // функция вывода на экран 
     function printOrder( obj, position ){
 		var ul,
@@ -76,7 +90,7 @@ function ready(){
 			objkeys = Object.keys( obj ),
 
 			i, len;
-
+            //console.log( objkeys );
 		ul = createEl( "ul", "name");
 		ul.insertAdjacentHTML( "afterBegin", obj.brandName + " " + obj.model);
 
@@ -90,8 +104,37 @@ function ready(){
     }
 
     // вывод на экран примеров
-    printOrder( seba, "example" );
-    printOrder( rollerBlade, "example" );
+    var sebaTimer =  printOrder( seba, "example");
+    var rollerBladeTimer =  printOrder( rollerBlade, "example" );
+
+    function timer ( position, second ){
+        var posId = $( "#" + position ),
+            div = createEl( "div", "timer" ),
+            span = createEl( "span" ),
+            timer,
+            interval,
+            newDiv,
+            secondStop = second  * 1000
+            ;
+
+        div.appendChild( span );
+        posId.appendChild( div );
+        newDiv = $( "div.timer span" );
+
+        timer = setInterval(function(){
+            second--;
+            newDiv.innerHTML = second + "";
+            console.log( second );
+        
+        }, 1000 );
+        
+        setTimeout( function(){
+            clearTimeout( timer );
+            posId.removeChild(div);
+        }, secondStop );
+    }
+    //timer( "list", 10 );
+
 
     // функция проверки ввода формы
 
@@ -132,14 +175,13 @@ function ready(){
             cost = $( "#cost", this ).value.trim(),
             newModel; 
 
-        console.log( color );
-        
-        if( checkVal( brandName, model, cost) ){
-            
+        //console.log( color );
+        if( checkVal( brandName, model, cost ) ){
             newModel = new chinaRollers( type, brandName, model, gender, size, color, cost );
             
-            printOrder( newModel, "list" ); 
-            
+            timer ("list", 10 );
+            setTimeout( printOrder, 10000, newModel, "list" );
+             
             this.reset();           
         }
         else{
